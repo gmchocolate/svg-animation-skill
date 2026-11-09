@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+.DS_Store
+*.log
+# Never commit personal references or user-generated artifacts.
+.svg-animation-skill/
+motion-references/
+references-private/
+private-references/
+artifacts/
