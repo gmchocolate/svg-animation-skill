@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 180"
+     role="img" aria-labelledby="motion-title motion-desc">
+  <title id="motion-title">A connection reveals itself</title>
+  <desc id="motion-desc">A curved line connects two points, then stays visible.</desc>
+  <style>
+    .frame { fill: none; stroke: #94A3B8; stroke-opacity: .24; stroke-width: 1; }
+    .route { fill: none; stroke: #665FCE; stroke-width: 3;
+      stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 0;
+      animation: reveal 1.6s ease-in-out both; }
+    .node { fill: #665FCE; animation: arrive .45s ease-out both; }
+    .node.last { animation-delay: 1.15s; }
+    @keyframes reveal {
+      from { stroke-dashoffset: 1; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes arrive {
+      from { opacity: 0; transform: scale(.65); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .route, .node { animation: none; }
+    }
+  </style>
+  <rect class="frame" x="10" y="10" width="420" height="160" rx="16"/>
+  <path class="route" pathLength="1" d="M70 115 C150 32 290 32 370 115"/>
+  <circle class="node" cx="70" cy="115" r="7" style="transform-origin:70px 115px"/>
+  <circle class="node last" cx="370" cy="115" r="7" style="transform-origin:370px 115px"/>
+</svg>
